@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Beyond Epic</title>
+  <link rel="stylesheet" href="styles.css" />
+  <audio id="bgMusic" src="beyondmusic.mp3" autoplay loop></audio>
+</head>
+<body>
+  <!-- Header with tabs -->
+  <header>
+    <div class="tabs">
+      <span class="emoji-tab" id="shopTab">🛒</span>
+      <span class="emoji-tab" id="leaderboardTab">🏆</span>
+      <span class="emoji-tab" id="settingsTab">⚙️</span>
+    </div>
+    <h1>Beyond Epic</h1>
+    <div id="timer">0.0s</div>
+  </header>
+
+  <!-- Main game area -->
+  <main>
+    <button id="discoverBtn" class="discover-btn">Discover</button>
+    <div id="resultBox" class="result-box"></div>
+    <div id="findsList" class="finds-list"><strong>Finds:</strong></div>
+  </main>
+
+  <!-- Shop Modal -->
+  <section id="shopModal" class="modal hidden">
+    <h2>Shop 🛒</h2>
+    <div id="shopItems"></div>
+  </section>
+
+  <!-- Leaderboard Modal -->
+  <section id="leaderboardModal" class="modal hidden">
+    <h2>Leaderboard 🏆</h2>
+    <div id="leaderboardContent"></div>
+  </section>
+
+  <!-- Settings Modal -->
+  <section id="settingsModal" class="modal hidden">
+    <h2>Settings ⚙️</h2>
+    <button id="resetBtn">Reset Progress</button>
+    <button id="exportBtn">Export Save</button>
+    <button id="importBtn">Import Save</button>
+    <input type="file" id="importFile" style="display:none" />
+
+    <div id="statsForNerds">
+      <h3>Stats for Nerds</h3>
+      <p>Total Clicks: <span id="statClicks">0</span></p>
+      <p>Total Points: <span id="statPoints">0</span></p>
+      <p>Time Played: <span id="statTime">0.0s</span></p>
+      <p>Rarest Find: <span id="statRarest">None</span></p>
+      <p>Auto-Clickers: <span id="statAuto">0</span></p>
+      <p>Background: <span id="statBG">White</span></p>
+      <p>Achievements: <span id="statAchieve">0/60</span></p>
+      <p>Unlocked Rarity Chances:</p>
+      <ul id="rarityChancesList"></ul>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="game.js"></script>
+</body>
+</html>
